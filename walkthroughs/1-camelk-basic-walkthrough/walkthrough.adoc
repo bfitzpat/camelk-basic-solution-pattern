@@ -1,0 +1,55 @@
+= Create and Deploy Your First Apache Camel K Integration
+
+[type=walkthroughResource,serviceName=openshift]
+.Red Hat OpenShift
+****
+* link:{openshift-host}/console[Console, window="_blank"]
+* link:https://help.openshift.com/[Openshift Online Help Center, window="_blank"]
+* link:https://blog.openshift.com/[Openshift Blog, window="_blank"]
+****
+
+[time=10]
+== Creating Your First Apache Camel K Integration
+
+=== Setting up Apache Camel K in OpenShift
+
+. Do first step.
+. Do second step.
+
+[type=verification]
+====
+Did it work?
+====
+
+[type=verificationFail]
+Try the steps again. If it's still not working contact your administrator.
+
+=== Open Your Local VS Code Instance and Work Through the `Starting a new Camel K Route` tutorial
+
+. Open VS Code
+. Install the link:https://marketplace.visualstudio.com/items?itemName=redhat.vscode-didact[Didact extension by Red Hat]
+. Install the link:https://marketplace.visualstudio.com/items?itemName=redhat.apache-camel-extension-pack[Extension Pack for Apache Camel by Red Hat]
+. Find the `Didact Tutorials` view, navigate to `Apache Camel K -> Starting a new Camel K Route (Solution Pattern)`. Swipe right and click the Start Didact Tutorial button.
+. Work through the `Starting a new Camel K Route` tutorial and return to Solution Explorer when you are done.
+
+[type=verification]
+====
+Did it work?
+====
+
+[type=verificationFail]
+Try the steps again. If it's still not working contact your administrator.
+
+=== Find Your Running Camel K Integration
+
+. Open the OpenShift link:{openshift-host}/console[Console, window="_blank"]
+. Locate the XXX pod 
+. Find the log and look for your messages in the console
+
+[type=verification]
+====
+Did it work?
+====
+
+[type=verificationFail]
+Try the steps again. If it's still not working contact your administrator.
