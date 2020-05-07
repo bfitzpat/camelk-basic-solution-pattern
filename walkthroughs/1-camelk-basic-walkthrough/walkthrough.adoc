@@ -36,7 +36,7 @@ In this Solution Pattern, you will be creating a simple Greeter application that
 == Creating a project
 :task-context: creating-projects
 
-NOTE: A note about Operators: Until the IPT uber-operator is available, you will have to ask your cluster administrator to add the Camel K Operator to your cluster before working through this process.
+WARNING: Until the IPT uber-operator is available, you will have to ask your cluster administrator to add the Camel K Operator to your cluster before working through this process.
 
 ****
 *Creating a new project in OpenShift*
@@ -44,7 +44,7 @@ NOTE: A note about Operators: Until the IPT uber-operator is available, you will
 
 Follow these steps to create a new project.
 
-. Go to link:{openshift-console-url}[Console, window="_blank"]
+. Go to the link:{openshift-console-url}[OpenShift Console, window="_blank"]
 . Create a new project named `camel-basic`. Go to `Home->Projects` and click the `Create Project` button.
 . Monitor the OpenShift Console until a green check mark is displayed beside the new project.
 
@@ -63,12 +63,14 @@ Look at the link:openshift-console-url: {openshift-host}/projects[OpenShift, win
 
 Follow these steps on your local machine to create and deploy your integration in your preferred IDE.
 
-. Open your preferred IDE. For *VS Code* or *Red Hat Code Ready Workspaces*:
-.. Install the link:https://marketplace.visualstudio.com/items?itemName=redhat.vscode-didact[Didact extension by Red Hat]
-.. Install the link:https://marketplace.visualstudio.com/items?itemName=redhat.apache-camel-extension-pack[Extension Pack for Apache Camel by Red Hat]
-.. Find the `Didact Tutorials` view, navigate to `Apache Camel K -> Starting a new Camel K Route (Solution Pattern)`. Swipe right and click the Start Didact Tutorial button.
-.. Work through the `Starting a new Camel K Route` tutorial.
+Open your preferred IDE. For *VS Code* or *Red Hat Code Ready Workspaces*:
 
+. Install the link:https://marketplace.visualstudio.com/items?itemName=redhat.vscode-didact[Didact extension by Red Hat]
+. Install the link:https://marketplace.visualstudio.com/items?itemName=redhat.apache-camel-extension-pack[Extension Pack for Apache Camel by Red Hat]
+. Find the *Didact Tutorials* view, navigate to `Apache Camel K -> Starting a new Camel K Route (Solution Pattern)`. Swipe right and click the Start Didact Tutorial button.
+. Work through the `Starting a new Camel K Route` tutorial.
+
+//-
 Or, use your preferred development environment with access to Camel K, do the following:
 
 . Open a new Terminal window.
@@ -78,6 +80,7 @@ Or, use your preferred development environment with access to Camel K, do the fo
 . To verify that the integration is running, type `kamel get` to get a list of the integrations currently running or starting up.
 . When the integration is in the status *Running*, you can view the log for the integration by typing `kamel log Greeter`.
 
+//-
 Return to Solution Explorer when you are done.
 
 [type=verification]
