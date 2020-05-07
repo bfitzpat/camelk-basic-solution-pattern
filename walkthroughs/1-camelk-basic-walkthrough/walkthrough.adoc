@@ -26,7 +26,7 @@ In this Solution Pattern, you will be creating a simple Greeter application that
 .Microsoft Visual Studio Code
 ****
 * link:https://code.visualstudio.com/[VS Code, window="_blank"]
-* link:https://code.visualstudio.com/docs[VS Code Docs, window="_blank"]
+* link:https://code.visualstudio.com/docs[VS Code Documentation, window="_blank"]
 ****
 
 :sectnums:
@@ -58,16 +58,27 @@ Look at the link:openshift-console-url: {openshift-host}/projects[OpenShift, win
 
 [time=15]
 [id='creating-a-project-in-vscode']
-== Creating your project in VS Code
+== Creating your project in VS Code or your Preferred IDE
 :task-context: vs-code
 
-Follow these steps on your local machine to create and deploy your integration.
+Follow these steps on your local machine to create and deploy your integration in your preferred IDE.
 
-. Open VS Code
-. Install the link:https://marketplace.visualstudio.com/items?itemName=redhat.vscode-didact[Didact extension by Red Hat]
-. Install the link:https://marketplace.visualstudio.com/items?itemName=redhat.apache-camel-extension-pack[Extension Pack for Apache Camel by Red Hat]
-. Find the `Didact Tutorials` view, navigate to `Apache Camel K -> Starting a new Camel K Route (Solution Pattern)`. Swipe right and click the Start Didact Tutorial button.
-. Work through the `Starting a new Camel K Route` tutorial and return to Solution Explorer when you are done.
+. Open your preferred IDE. For *VS Code* or *Red Hat Code Ready Workspaces*:
+.. Install the link:https://marketplace.visualstudio.com/items?itemName=redhat.vscode-didact[Didact extension by Red Hat]
+.. Install the link:https://marketplace.visualstudio.com/items?itemName=redhat.apache-camel-extension-pack[Extension Pack for Apache Camel by Red Hat]
+.. Find the `Didact Tutorials` view, navigate to `Apache Camel K -> Starting a new Camel K Route (Solution Pattern)`. Swipe right and click the Start Didact Tutorial button.
+.. Work through the `Starting a new Camel K Route` tutorial.
+
+Or, use your preferred development environment with access to Camel K, do the following:
+
+. Open a new Terminal window.
+. Ensure that you have access to the `kamel` command-line tool and that it is connected to your running OpenShift instance by typing `kamel version`. (See the link:https://camel.apache.org/camel-k/latest/installation/installation.html[Apache Camel K Installation documentation for help.])
+. Type `kamel init Greeter.java` to create a new Java route that puts a message in the log once per second.
+. Type `kamel run Greeter.java` to start the Integration.
+. To verify that the integration is running, type `kamel get` to get a list of the integrations currently running or starting up.
+. When the integration is in the status *Running*, you can view the log for the integration by typing `kamel log Greeter`.
+
+Return to Solution Explorer when you are done.
 
 [type=verification]
 Look at the link:openshift-console-url: {openshift-host}/dashboards[OpenShift, window="_blank"] console. Drill down into the `Operators->Installed Operators` list for the `camel-basic` project. Do you see your new integration in the *Integration* list?
@@ -85,11 +96,11 @@ Look at the link:openshift-console-url: {openshift-host}/dashboards[OpenShift, w
 Follow these steps to verify that your integration is running in the OpenShift console.
 
 . Open the OpenShift link:{openshift-host}/console[Console, window="_blank"]
-. Locate the XXX pod
-. Find the log and look for your messages in the console
+. In the `Workloads->Pods` list, look for a pod that starts with `greeter-` and click on it.
+. Click on the Logs tab and view the running log for your route. You should see similar output to what you witnessed in your IDE or terminal window.
 
 [type=verification]
-Did it work?
+Look at the link:openshift-console-url: {openshift-host}/dashboards[OpenShift, window="_blank"] console. Drill down into the `Workloads->Pods` list for the `greeter-` pod and look at its log. Do you see the same messages you saw in your IDE?
 
 [type=verificationFail]
 {standard-fail-text}
