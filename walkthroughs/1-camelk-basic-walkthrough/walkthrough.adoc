@@ -35,9 +35,7 @@ In this Solution Pattern, you will be creating a simple Greeter application that
 [#creating-a-project]
 == Creating a project
 
-+
 NOTE: A note about Operators: Until the IPT uber-operator is available, you will have to ask your cluster administrator to add the Camel K Operator to your cluster before working through this process. 
-+
 
 ****
 *Creating a new project in OpenShift*
