@@ -22,15 +22,17 @@ In this Solution Pattern, you will be creating a simple Greeter application that
 * link:https://blog.openshift.com/[OpenShift Blog, window="_blank"]
 ****
 
+[type=walkthroughResource,serviceName=vscode]
 .Microsoft Visual Studio Code
 ****
 * link:https://code.visualstudio.com/[VS Code, window="_blank"]
-* link:https://code.visualstudio.com/docs[VS Code Docs], window="_blank"]
+* link:https://code.visualstudio.com/docs[VS Code Docs, window="_blank"]
 ****
 
 :sectnums:
 
-[time=10]
+[time=5]
+[id='creating-a-project']
 == Creating a project
 
 note: A note about Operators: Until the IPT uber-operator is available, you will have to ask your cluster administrator to add the Camel K Operator to your cluster before working through this process. 
@@ -50,6 +52,8 @@ Look at the link:openshift-console-url: {openshift-host}/projects[OpenShift, win
 [type=verificationFail]
 {standard-fail-text}
 
+[time=15]
+[id='creating-a-project-in-vscode']
 == Creating your project in VS Code
 
 Follow these steps on your local machine to create and deploy your integration.
@@ -68,6 +72,8 @@ Drill down into the `Operators->Installed Operators` list for the `camel-basic` 
 [type=verificationFail]
 {standard-fail-text}
 
+[time=5]
+[id='check-openshift-for-integration']
 == Find Your Running Camel K Integration
 
 Follow these steps to verify that your integration is running in the OpenShift console.
