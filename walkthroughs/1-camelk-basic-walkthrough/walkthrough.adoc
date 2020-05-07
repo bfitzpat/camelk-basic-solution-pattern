@@ -36,7 +36,9 @@ In this Solution Pattern, you will be creating a simple Greeter application that
 == Creating a project
 :task-context: creating-projects
 
-note: A note about Operators: Until the IPT uber-operator is available, you will have to ask your cluster administrator to add the Camel K Operator to your cluster before working through this process.
++
+NOTE: A note about Operators: Until the IPT uber-operator is available, you will have to ask your cluster administrator to add the Camel K Operator to your cluster before working through this process.
++
 
 ****
 *Creating a new project in OpenShift*
@@ -70,9 +72,7 @@ Follow these steps on your local machine to create and deploy your integration.
 . Work through the `Starting a new Camel K Route` tutorial and return to Solution Explorer when you are done.
 
 [type=verification]
-Look at the link:openshift-console-url: {openshift-host}/dashboards[OpenShift, window="_blank"] console.
-
-Drill down into the `Operators->Installed Operators` list for the `camel-basic` project. Do you see your new integration in the *Integration* list?
+Look at the link:openshift-console-url: {openshift-host}/dashboards[OpenShift, window="_blank"] console. Drill down into the `Operators->Installed Operators` list for the `camel-basic` project. Do you see your new integration in the *Integration* list?
 
 [type=verificationFail]
 {standard-fail-text}
