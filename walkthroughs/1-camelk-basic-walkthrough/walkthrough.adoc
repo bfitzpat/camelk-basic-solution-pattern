@@ -6,6 +6,7 @@
 //attributes
 :title: 1 - Create and deploy your first Apache Camel K Integration
 :standard-fail-text: Verify that you followed all the steps. If you continue to have issues, contact your administrator.
+:bl: pass:[ +]
 
 [id='1-create-and-deploy-your-first-integration']
 = {title}
@@ -70,7 +71,7 @@ Open your preferred IDE. For *VS Code* or *Red Hat Code Ready Workspaces*:
 . Find the *Didact Tutorials* view, navigate to `Apache Camel K -> Starting a new Camel K Route (Solution Pattern)`. Swipe right and click the Start Didact Tutorial button.
 . Work through the `Starting a new Camel K Route` tutorial.
 
-//-
+{bl}
 Or, use your preferred development environment with access to Camel K, do the following:
 
 . Open a new Terminal window.
@@ -80,7 +81,7 @@ Or, use your preferred development environment with access to Camel K, do the fo
 . To verify that the integration is running, type `kamel get` to get a list of the integrations currently running or starting up.
 . When the integration is in the status *Running*, you can view the log for the integration by typing `kamel log Greeter`.
 
-//-
+{bl}
 Return to Solution Explorer when you are done.
 
 [type=verification]
