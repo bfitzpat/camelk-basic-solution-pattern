@@ -12,7 +12,7 @@
 
 Learn how to create a simple Apache Camel K integration so you can learn about important features before jumping into more complex examples.
 
-In this Solution Pattern, you will be creating a simple Greeter application that says *Hello, customer!* every few seconds.
+In this Solution Pattern, you will be creating a simple Greeter application that says 'Hello, customer!' every few seconds.
 
 [type=walkthroughResource,serviceName=openshift]
 .Red Hat OpenShift
@@ -32,21 +32,21 @@ In this Solution Pattern, you will be creating a simple Greeter application that
 :sectnums:
 
 [time=5]
-[#creating-a-project]
+[id='creating-a-project']
 == Creating a project
-// task-scoped attributes
-:task-context: creating-a-project
+:task-context: creating-projects
 
-NOTE: A note about Operators: Until the IPT uber-operator is available, you will have to ask your cluster administrator to add the Camel K Operator to your cluster before working through this process. 
+note: A note about Operators: Until the IPT uber-operator is available, you will have to ask your cluster administrator to add the Camel K Operator to your cluster before working through this process.
 
 ****
 *Creating a new project in OpenShift*
+****
 
 Follow these steps to create a new project.
 
 . Go to link:{openshift-console-url}[Console, window="_blank"]
-. Create a new project named `camel-basic`. Go to `Home->Projects` and click the `Create Project` button. 
-. Monitor the OpenShift Console until a green check mark is displayed beside the new project. 
+. Create a new project named `camel-basic`. Go to `Home->Projects` and click the `Create Project` button.
+. Monitor the OpenShift Console until a green check mark is displayed beside the new project.
 
 [type=verification]
 Look at the link:openshift-console-url: {openshift-host}/projects[OpenShift, window="_blank"] console. Do you see your newly created project displayed in the *Projects* list?
@@ -54,13 +54,12 @@ Look at the link:openshift-console-url: {openshift-host}/projects[OpenShift, win
 [type=verificationFail]
 {standard-fail-text}
 
-// end::task-creating-a-project[]
+// end::task-creating-projects[]
 
 [time=15]
-[#creating-a-project-in-vscode]
+[id='creating-a-project-in-vscode']
 == Creating your project in VS Code
-// task-scoped attributes
-:task-context: creating-a-project-in-vscode
+:task-context: vs-code
 
 Follow these steps on your local machine to create and deploy your integration.
 
@@ -71,25 +70,24 @@ Follow these steps on your local machine to create and deploy your integration.
 . Work through the `Starting a new Camel K Route` tutorial and return to Solution Explorer when you are done.
 
 [type=verification]
-Look at the link:openshift-console-url: {openshift-host}/dashboards[OpenShift, window="_blank"] console. 
+Look at the link:openshift-console-url: {openshift-host}/dashboards[OpenShift, window="_blank"] console.
 
 Drill down into the `Operators->Installed Operators` list for the `camel-basic` project. Do you see your new integration in the *Integration* list?
 
 [type=verificationFail]
 {standard-fail-text}
 
-// end::task-creating-a-project-in-vscode[]
+// end::task-vscode[]
 
 [time=5]
-[#check-openshift-for-integration]
+[id='check-openshift-for-integration']
 == Find Your Running Camel K Integration
-// task-scoped attributes
-:task-context: check-openshift-for-integration
+:task-context: run-camel
 
 Follow these steps to verify that your integration is running in the OpenShift console.
 
 . Open the OpenShift link:{openshift-host}/console[Console, window="_blank"]
-. Locate the XXX pod 
+. Locate the XXX pod
 . Find the log and look for your messages in the console
 
 [type=verification]
@@ -98,4 +96,4 @@ Did it work?
 [type=verificationFail]
 {standard-fail-text}
 
-// end::task-check-openshift-for-integration[]
+// end::run-camel[]
