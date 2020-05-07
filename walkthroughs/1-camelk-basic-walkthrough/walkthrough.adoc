@@ -1,7 +1,3 @@
-[type=walkthroughResource,serviceName=camelk]
-.Apache Camel K
-// change the name when we get a productized name for Apache Camel K
-****
 // URLs
 :openshift-console-url: {openshift-host}/dashboards
 :fuse-documentation-url: https://access.redhat.com/documentation/en-us/red_hat_fuse/{fuse-version}/
@@ -9,35 +5,54 @@
 
 //attributes
 :title: 1 - Create and deploy your first Apache Camel K Integration
+:standard-fail-text: Verify that you followed all the steps. If you continue to have issues, contact your administrator.
 
+[id='1-create-and-deploy-your-first-integration']
 = {title}
 
 Learn how to create a simple Apache Camel K integration so you can learn about important features before jumping into more complex examples.
 
 In this Solution Pattern, you will be creating a simple Greeter application that says 'Hello, customer!' every few seconds.
 
+[type=walkthroughResource,serviceName=openshift]
+.Red Hat OpenShift
+****
+* link:{openshift-console-url}[Console, window="_blank"]
+* link:https://docs.openshift.com/dedicated/4/welcome/index.html/[OpenShift Documentation, window="_blank"]
+* link:https://blog.openshift.com/[OpenShift Blog, window="_blank"]
+****
+
+.Microsoft Visual Studio Code
+****
+* link:https://code.visualstudio.com/[VS Code, window="_blank"]
+* link:https://code.visualstudio.com/docs[VS Code Docs], window="_blank"]
+****
+
+:sectnums:
+
 [time=10]
-== Creating Your First Apache Camel K Integration
+== Creating a project
 
-=== A note about Operators
+note: A note about Operators: Until the IPT uber-operator is available, you will have to ask your cluster administrator to add the Camel K Operator to your cluster before working through this process. 
 
-Until the IPT uber-operator is available, you will have to ask your cluster administrator to add the Camel K Operator to your cluster before working through this process. 
+****
+*Creating a new project in OpenShift*
 
-=== Setting up Apache Camel K in OpenShift
+Follow these steps to create a new project.
 
 . Go to link:{openshift-console-url}[Console, window="_blank"]
 . Create a new project named `camel-basic`. Go to `Home->Projects` and click the `Create Project` button. 
 . Monitor the OpenShift Console until a green check mark is displayed beside the new project. 
 
 [type=verification]
-====
 Look at the link:openshift-console-url: {openshift-host}/projects[OpenShift, window="_blank"] console. Do you see your newly created project displayed in the *Projects* list?
-====
 
 [type=verificationFail]
 {standard-fail-text}
 
-=== Open Your Local VS Code Instance and Work Through the `Starting a new Camel K Route` tutorial
+== Creating your project in VS Code
+
+Follow these steps on your local machine to create and deploy your integration.
 
 . Open VS Code
 . Install the link:https://marketplace.visualstudio.com/items?itemName=redhat.vscode-didact[Didact extension by Red Hat]
@@ -46,25 +61,23 @@ Look at the link:openshift-console-url: {openshift-host}/projects[OpenShift, win
 . Work through the `Starting a new Camel K Route` tutorial and return to Solution Explorer when you are done.
 
 [type=verification]
-====
 Look at the link:openshift-console-url: {openshift-host}/dashboards[OpenShift, window="_blank"] console. 
 
 Drill down into the `Operators->Installed Operators` list for the `camel-basic` project. Do you see your new integration in the *Integration* list?
-====
 
 [type=verificationFail]
 {standard-fail-text}
 
-=== Find Your Running Camel K Integration
+== Find Your Running Camel K Integration
+
+Follow these steps to verify that your integration is running in the OpenShift console.
 
 . Open the OpenShift link:{openshift-host}/console[Console, window="_blank"]
 . Locate the XXX pod 
 . Find the log and look for your messages in the console
 
 [type=verification]
-====
 Did it work?
-====
 
 [type=verificationFail]
-Try the steps again. If it's still not working contact your administrator.
+{standard-fail-text}
