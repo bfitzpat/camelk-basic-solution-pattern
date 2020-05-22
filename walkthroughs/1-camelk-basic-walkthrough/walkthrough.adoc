@@ -11,9 +11,9 @@
 [id='1-create-and-deploy-your-first-integration']
 = {title}
 
-Learn how to create a simple Apache Camel K integration so you can learn about important features before jumping into more complex examples.
+Create a simple link:https://camel.apache.org/camel-k/latest/index.html[Apache Camel K, window="_black"] integration to learn about important features, before working with more complex examples.
 
-In this Solution Pattern, you will be creating a simple Greeter application that says 'Hello, customer!' every few seconds.
+In this Solution Pattern, you will create a simple Greeter application that sends the message 'Hello, customer!' every few seconds.
 
 [type=walkthroughResource,serviceName=openshift]
 .Red Hat OpenShift
@@ -37,7 +37,8 @@ In this Solution Pattern, you will be creating a simple Greeter application that
 == Creating a project
 :task-context: creating-projects
 
-WARNING: Until the IPT uber-operator is available, you will have to ask your cluster administrator to add the Camel K Operator to your cluster before working through this process.
+WARNING: You must ask your cluster administrator to add the Camel K Operator to your cluster before perforing this Solution Pattern. 
+// This IPT uber-operator will make this task obsolete when it becomes available.
 
 ****
 *Creating a new project in OpenShift*
@@ -45,9 +46,11 @@ WARNING: Until the IPT uber-operator is available, you will have to ask your clu
 
 Follow these steps to create a new project.
 
-. Go to the link:{openshift-console-url}[OpenShift Console, window="_blank"]
-. Create a new project named `camel-basic`. Go to `Home->Projects` and click the `Create Project` button.
-. Monitor the OpenShift Console until a green check mark is displayed beside the new project.
+. Go to the link:{openshift-console-url}[OpenShift Console, window="_blank"].
+. Create a new project named `camel-basic`. 
+.. Go to *Home* -> *Projects*.
+.. Click the *Create Project* button.
+. Monitor the OpenShift Console until a green check mark is displayed next to the new project.
 
 [type=verification]
 Look at the link:openshift-console-url: {openshift-host}/projects[OpenShift, window="_blank"] console. Do you see your newly created project displayed in the *Projects* list?
@@ -64,17 +67,20 @@ Look at the link:openshift-console-url: {openshift-host}/projects[OpenShift, win
 
 Follow these steps on your local machine to create and deploy your integration in your preferred IDE.
 
-Open your preferred IDE. For *VS Code* or *Red Hat Code Ready Workspaces*:
+The following procedure applies to using VS Code or Red Hat Code Ready Workspaces to create and deploy your integration.
 
-. Install the link:https://marketplace.visualstudio.com/items?itemName=redhat.vscode-didact[Didact extension by Red Hat]
-. Install the link:https://marketplace.visualstudio.com/items?itemName=redhat.apache-camel-extension-pack[Extension Pack for Apache Camel by Red Hat]
-. Find the *Didact Tutorials* view, navigate to `Apache Camel K -> Starting a new Camel K Route (Solution Pattern)`. Swipe right and click the Start Didact Tutorial button.
-. Work through the `Starting a new Camel K Route` tutorial.
+. Install the link:https://marketplace.visualstudio.com/items?itemName=redhat.vscode-didact[Didact extension by Red Hat].
+. Install the link:https://marketplace.visualstudio.com/items?itemName=redhat.apache-camel-extension-pack[Extension Pack for Apache Camel by Red Hat].
+. Select the *Didact Tutorials* view.
+.. Navigate to *Apache Camel K* -> *Starting a new Camel K Route* Solution Pattern. 
+.. Swipe right to 
+.. Click the *Start Didact Tutorial* button.
+. Follow the steps in the `Starting a new Camel K Route` tutorial.
 
 {bl}
-Or, use your preferred development environment with access to Camel K, do the following:
+Or, use your preferred development environment with access to Camel K to create and deploy your integration.
 
-. Open a new Terminal window.
+. Open a new terminal window.
 . Ensure that you have access to the `kamel` command-line tool and that it is connected to your running OpenShift instance by typing `kamel version`. (See the link:https://camel.apache.org/camel-k/latest/installation/installation.html[Apache Camel K Installation documentation for help.])
 . Type `kamel init Greeter.java` to create a new Java route that puts a message in the log once per second.
 . Type `kamel run Greeter.java` to start the Integration.
