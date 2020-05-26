@@ -11,7 +11,7 @@
 [id='1-create-and-deploy-your-first-integration']
 = {title}
 
-Create a simple link:https://camel.apache.org/camel-k/latest/index.html[Apache Camel K, window="_black"] integration to learn about important prodcut features, before you work on more complex examples.
+Create a simple link:https://camel.apache.org/camel-k/latest/index.html[Apache Camel K, window="_black"] integration to learn about important product features, before you work on more complex examples.
 
 In this Solution Pattern you will create a simple Greeter application that sends the message 'Hello, customer!' every few seconds.
 
